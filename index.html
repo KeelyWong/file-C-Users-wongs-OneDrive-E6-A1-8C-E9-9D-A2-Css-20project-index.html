@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>K&Y Florist</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+        body{
+            background-color:#fff;
+            min-height: 100vh;
+            background-image: url(flowershop.jpg);
+            background-repeat: no-repeat;
+            background-size:cover 
+
+        }
+        .header{
+            width: 100%;
+            height: 100px;
+            background-color: darkseagreen;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 0 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+        
+        .logo{
+            font-size: 58px;
+            font-weight: bold;
+            color: forestgreen;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+        .nav{
+            display: flex;
+            gap: 40px;
+        }
+        .nav-button{
+            padding: 12px 24px;
+            background-color:transparent;
+            border: 2px solid #fff;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .nav-button:hover{
+            background-color: #fff;
+            color: limegreen;
+        }
+        .main-section{
+            width: 100%;
+            height: 100vh;
+            background color: transparent;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            position:relative;
+        }
+        .main-section::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.6);
+        }
+        .welcome-text{
+            font-size: 150px;
+            font-weight: bold;
+            color:#2f922f;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            text-transform: uppercase;
+            letter-spacing: 10px;
+            animation: fadeIn 2s ease;
+        }
+        .welcome-description{
+            font-size: 24px;
+            color:#fff;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            line-height: 1.6;
+            animation: fadeIn 2s ease 0.5s backwards;
+            margin-bottom: 30px;
+        }
+        .description-paragraph{
+            margin-bottom: 20px;
+        }
+        .cta-button{
+            padding: 15px 40px;
+            background-color: darkseagreen;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease;
+            animation: fadeIn 2s ease 1s backwards;
+        }
+        .cta-button:hover{
+            background-color: #fff;
+            color:darkseagreen;
+            transform: translateY(-3px);
+        }
+        footer{
+            background-color: rgba(20,20,20,0,8);
+            backdrop-filter: blur(30px);
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer a{
+            font-size: 20px;
+            color:#fff;
+            margin:0 15px;
+            text-decoration: none;
+        }
+        footer a:hover{
+            color:limegreen;
+        }
+        @keyframes fadeIn{
+            from{
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to{
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+    </style>
+<head>
+<body>
+    <!--Header Section-->
+    <header class="header">
+        <a href="index.html" class="logo">K&Y FLORIST</a>
+        <nav class="nav">
+            <a href="home.html" class="nav-button">Home</a>
+            <a href="menu.html" class="nav-button">Menu</a>
+            <a href="pay.html" class="nav-button">Pay Now</a>
+            <a href="contact.html" class="nav-button">Contact us</a>
+            <a href="signup.html" class="nav-button">Sign up</a>
+        </nav>
+    </header>
+    
+    <!--Main Section-->
+    <section class="main-section">
+       <h1 class="welcome-text">WELCOME</h1>
+       <div class="welcome-description">
+           <p class="description-paragraph">
+        Discover the art of natural beauty with our handcrafted floral arrangements. 
+        From stunning bouquets to elegant centerpieces, we bring your floral dreams to life. 
+        Each arrangement is created with love, care, and the freshest blooms from our garden to yours.
+           </p>
+       <a href="menu.html" class="cta-button">Explore Our Collection</a>
+    </section>
+
+    <footer>
+        <a href="FAQ.html">FAQ</a>
+        <a href="home.html">About us</a>
+        <a href="contact.html">Location</a>
+        <hr style="width:80%; text-align:center;">
+        <h3 style="color:darkgray"> Copyright&copy; All rights reserved</h3>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Flower Delivery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f7f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .signup-container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .signup-title {
+            text-align: center;
+            color: #2e582e;
+            margin-bottom: 1.5rem;
+            font-size: 38px;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #3c6e3c;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid darkseagreen;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: border-color 0.2s ease;
+            background-color: white;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #3c6e3c;
+            box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+        }
+
+        input::placeholder {
+            color: #98bb98;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: darkseagreen;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #3c6e3c;
+        }
+
+        .submit-btn:active {
+            background-color: #2e582e;
+        }
+
+        @media (max-width: 480px) {
+            .signup-container {
+                padding: 1.5rem;
+            }
+
+            .signup-title {
+                font-size: 20px;
+            }
+
+            input, .submit-btn {
+                padding: 0.625rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h2 class="signup-title">Sign Up</h2>
+        <form id="signupForm" novalidate>
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    placeholder="Enter your full name"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="email">Gmail Address</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="example@gmail.com"
+                    pattern="[a-z0-9._%+-]+@gmail\.com$"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input 
+                type="password" 
+                id="password" 
+                name="password" 
+                placeholder="Enter your password"
+                minlength="8"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input 
+                type="tel" 
+                id="phone" 
+                name="phone" 
+                placeholder="Enter your phone number"
+                pattern="[0-9]{10}"
+                required
+            >
+        </div>
+
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+</div>
+
+<script>
+    const form = document.getElementById('signupForm');
+    
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        if (form.checkValidity()) {
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
+            console.log('Form submitted:', data);
+            alert('Sign up successful!');
+            form.reset();
+        } else {
+            form.reportValidity();
+        }
+    });
+</script>
+</body>
+</html>

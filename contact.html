@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Flower Delivery</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff;
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #8FBC8F;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            color: white;
+            font-size: 2.5rem;
+        }
+        
+        main{
+            flex: 1;
+        }
+
+        .process-map {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background-color: #F0FFF0;
+            border-radius: 10px;
+        }
+
+        .steps {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 0;
+        }
+
+        .step {
+            text-align: center;
+            flex: 1;
+            position: relative;
+        }
+
+        .step:not(:last-child):after {
+            content: '→';
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #8FBC8F;
+            font-size: 1.5rem;
+        }
+
+        .step h3 {
+            font-family: 'Roboto', sans-serif;
+            color: #2E8B57;
+            margin-bottom: 0.5rem;
+        }
+
+        .info-section {
+            text-align: center;
+            padding: 2rem;
+            background-color: #E8F5E9;
+            margin: 2rem 0;
+        }
+
+        .info-section p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #2E8B57;
+        }
+
+        footer {
+            background-color: #f5f5f5;
+            padding: 3rem 0;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-section {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: left;
+        }
+
+        .contact-section h1 {
+            font-family: 'Playfair Display', serif;
+            color: forestgreen;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info {
+            background-color: #F0FFF0;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: left;
+            margin-bottom: 1.5rem;
+            padding: 0.5rem;
+            background-color: white;
+            border-radius: 5px;
+        }
+
+        .contact-item i {
+            color: #8FBC8F;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+            width: 24px;
+        }
+
+        .contact-item p {
+            margin: 0;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Delivery to your home</h1>
+    </header>
+
+    <main>
+    <section class="process-map">
+        <div class="steps">
+            <div class="step">
+                <h3>Step 1</h3>
+                <p>Select Payment</p>
+            </div>
+            <div class="step">
+                <h3>Step 2</h3>
+                <p>Confirm Order</p>
+            </div>
+            <div class="step">
+                <h3>Step 3</h3>
+                <p>Wait for Arrival</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="info-section">
+        <p>We will deliver your order within 4 to 6 hours. If you have any questions, please contact us.</p>
+    </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+        <section class="contact-section">
+        <h1>Contact Us</h1>
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <p>012-3456789</p>
+                <p>,019-8765432</P>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <p>k&Yfloristyyds@gmail.com</p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>69,A/7 Jalan Mewah,Bandar Ipoh,32510,Ipoh Perak,Malaysia</p>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-instagram"></i>
+                <p>K&Y_FLORIST_ipoh</p>
+            </div>
+        </div>
+        </section>
+        </div>
+    </footer>
+</body>
+</html>

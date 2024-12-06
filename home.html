@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Our Shop - Flower Delivery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    font-family: 'Lato', sans-serif;
+}
+
+header {
+    background-color: darkseagreen;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+header h1{
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.intro {
+    background-color: #f5f5f5;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    border-radius: 8px;
+    line-height: 1.6;
+    font-family: 'Lato', sans-serif;
+}
+
+.flower-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: rgba(143, 188, 143, 0.1);
+    border-radius: 8px;
+}
+
+.flower-img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 2rem;
+}
+
+.flower-info {
+    flex: 1;
+}
+
+.flower-info h2 {
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 1rem;
+    color: darkseagreen;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.flower-info p {
+    font-size: 1.05rem;
+    font-weight: 300;
+}
+
+.closing {
+    background-color: darkseagreen;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    margin: 3rem 0;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-family: 'Playfair Display',serif;
+}
+
+footer {
+    background-color: #f5f5f5;
+    padding: 2rem;
+    text-align: left;
+}
+.order-btn {
+    display: inline-block;
+    background-color: darkseagreen;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    font-family: 'Playfair Display',serif;
+}
+
+.order-btn:hover {
+    background-color: #6b8e6b;
+}
+
+.learn-more-btn {
+    display: inline-block;
+    background-color: white;
+    color: darkseagreen;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    font-family: 'Playfair Display',serif;
+}
+
+.order-btn:hover {
+    background-color: #6b8e6b;
+}
+
+@media (max-width: 768px) {
+    .flower-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .flower-img {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .main-content {
+        padding: 1rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Our Shop</h1>
+    </header>
+
+    <div class="main-content">
+        <div class="intro">
+            <p>Our shop is an online delivery flower shop, where we believe that every occasion deserves the beauty of fresh flowers. Our mission is
+             to make it easy for you to express your feelings and brighten someone's day with our stunning arrangements. We source only the finest
+             blooms, carefully crafted by our skilled florists to ensure each bouquet is unique and vibrant.</p>
+            <p>Whether you're celebrating a special moment or simply want to show you care, we offer a wide selection of flowers and gifts for every event. 
+            With our reliable delivery service, your heartfelt messages will reach their destination on time, bringing joy and beauty to your loved 
+            ones. </p>
+            <p>Thank you for choosing us to be part of your special moments!</p>
+        </div>
+
+        <div class="flower-section">
+            <img src="imagesrose.jpg" alt="Rose" class="flower-img">
+            <div class="flower-info">
+                <h2>Roses</h2>
+                <p>The ultimate symbol of love and passion. Our roses are carefully selected for their beauty and longevity. 
+                Available in various colors, each carrying its own special meaning - red for love, pink for admiration, white for purity.</p>
+            </div>
+        </div>
+
+        <div class="flower-section">
+            <img src="imagesdaisy.jpg" alt="Daisy" class="flower-img">
+            <div class="flower-info">
+                <h2>Daisy</h2>
+                <p>Innocence and purity;often symbolizes new beginnings.</p>
+            </div>
+        </div>
+
+        <div class="flower-section">
+            <img src="imagessunflower.jpg" alt="Sunflower" class="flower-img">
+            <div class="flower-info">
+                <h2>Sunflowers</h2>
+                <p>Bringing warmth and happiness, sunflowers are the perfect choice for brightening anyone's day. 
+                   These cheerful blooms symbolize adoration, loyalty, and longevity.</p>
+            </div>
+        </div>
+
+        <div class="flower-section">
+            <img src="imageslily.jpg" alt="Lily" class="flower-img">
+            <div class="flower-info">
+                <h2>Lily</h2>
+                <p>Purity and refined beauty;often associated with motherhood. </p>
+            </div>
+        </div>
+
+        <div class="flower-section">
+            <img src="imagestulip.jpg" alt="Tulip" class="flower-img">
+            <div class="flower-info">
+                <h2>Tulips</h2>
+                <p>Perfect love;different colors can represent various feelings.
+                   Red for true love, yellow for cheerfulness.</p>
+            </div>
+        </div>
+
+        <div class="flower-section">
+            <img src="imagespeony.jpg" alt="Poeny" class="flower-img">
+            <div class="flower-info">
+                <h2>Peony</h2>
+                <p>Prosperity and romance;often symbolizes good fortune and a happy marriage.</p>
+            </div>
+        </div>
+
+        <div class="flower-section">
+            <img src="imageshehua.jpg" alt="Lotus Flower" class="flower-img">
+            <div class="flower-info">
+                <h2>Hehua/Lotus Flower</h2>
+                <p>Purity, enlightenment and rebirth, as it rises beautifully from muddy waters.</p>
+            </div>
+        </div>
+
+        <div class="closing">
+            <p>Enjoy the convenience of online flower ordering! We offer a wide variety of flower options, carefully designed by professional 
+               florists, and delivered to you on the same day. No matter where you are, just click and choose your favorite flowers.</p>
+        </div>
+    </div>
+
+    <footer>
+        <a href="menu.html" class="order-btn">Order Now</a>
+        <a href="FAQ.html" class="learn-more-btn">Learn more</a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu - Flower Delivery</title>
+    <style>
+        body {
+            font-family: 'Trebuchet MS', sans-serif;
+            background-color: white;
+            color: darkseagreen;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .menu-header {
+            text-align: left; 
+            font-family: 'Georgia', serif;
+            color: darkseagreen;
+        }
+        
+        .flower-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .flower-frame {
+            display: flex;
+            border: 2px solid darkseagreen;
+            margin-bottom: 20px;
+            padding: 10px;
+            width: 100%;
+        }
+        
+        .flower-image {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+        
+        .flower-controls {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+        }
+        
+        .price {
+            font-size: 1.2em;
+            color: darkseagreen;
+            margin-bottom: 10px;
+        }
+        
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .quantity-btn {
+            background-color: darkseagreen;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            margin: 0 10px;
+        }
+        
+        .add-to-cart {
+            background-color: darkseagreen;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+        }
+        
+        .footer-nav {
+            display: flex;
+            justify-content: flex-start; 
+            margin-top: 20px;
+        }
+        
+        .footer-btn {
+            background-color: darkseagreen;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin-right: 10px; 
+        }
+    </style>
+</head>
+<body>
+    <header class="menu-header">
+        <h1>Enjoy Shopping</h1>
+    </header>
+    
+    <section class="flower-container" id="flower-list">
+        <div class="flower-frame">
+            <img src="rose1.jpg" alt="Roses Bouquet(White&Pink)" class="flower-image">
+            <div class="flower-controls">
+                <h2>Roses Bouquet(White&Pink)</h2>
+                <div class="price">RM69.99</div>
+                <div class="quantity-control">
+                    <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button class="add-to-cart" onclick="addToCart(this)" 
+                data-name="Roses Bouquet(White&Pink)" 
+                data-price="69.99">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="flower-frame">
+            <img src="tulip1.jpg" alt="Tulip Bouquet(Pink)" class="flower-image">
+            <div class="flower-controls">
+                <h2>Tulip Bouquet(Pink)</h2>
+                <div class="price">RM39.99</div>
+                <div class="quantity-control">
+                    <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button class="add-to-cart" onclick="addToCart(this)" 
+                data-name="Tulip Bouquet(Pink)" 
+                data-price="39.99">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="flower-frame">
+            <img src="tulip2.jpg" alt="Tulip Bouquet(White&Purple)" class="flower-image">
+            <div class="flower-controls">
+                <h2>Tulip Bouquet(White&Purple)</h2>
+                <div class="price">RM59.99</div>
+                <div class="quantity-control">
+                    <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button class="add-to-cart" onclick="addToCart(this)" 
+                data-name="Tulip Bouquet(White&Purple)" 
+                data-price="59.99">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="flower-frame">
+            <img src="daisy1.jpg" alt="Mixed Flowers Bouquet(Daisy&Roses)" class="flower-image">
+            <div class="flower-controls">
+                <h2>Mixed Flowers Bouquet(Daisy&Roses)</h2>
+                <div class="price">RM59.99</div>
+                <div class="quantity-control">
+                    <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button class="add-to-cart" onclick="addToCart(this)" 
+                data-name="Mixed Flowers Bouquet(Daisy&Roses)" 
+                data-price="59.99">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="flower-frame">
+            <img src="daisy2.jpg" alt="Mixed Flowers Bouquet(Daisy&Tulip)" class="flower-image">
+            <div class="flower-controls">
+                <h2>Mixed Flowers Bouquet(Daisy&Tulip)</h2>
+                <div class="price">RM39.99</div>
+                <div class="quantity-control">
+                    <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button class="add-to-cart" onclick="addToCart(this)" 
+                data-name="Mixed Flowers Bouquet(Daisy&Tulip)" 
+                data-price="39.99">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="flower-frame">
+            <img src="lily1.jpg" alt="Lily Bouquet" class="flower-image">
+            <div class="flower-controls">
+                <h2>Lily Bouquet</h2>
+                <div class="price">RM39.99</div>
+                <div class="quantity-control">
+                    <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button class="add-to-cart" onclick="addToCart(this)" 
+                data-name="Lily Bouquet" 
+                data-price="39.99">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="flower-frame">
+            <img src="rose3.jpg" alt="Roses Bouquet(White&Purple)" class="flower-image">
+            <div class="flower-controls">
+                <h2>Roses Bouquet(White&Purple)</h2>
+                <div class="price">RM89.99</div>
+                <div class="quantity-control">
+                    <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button class="add-to-cart" onclick="addToCart(this)" 
+                data-name="Roses Bouquet(White&Purple)" 
+                data-price="89.99">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="flower-frame">
+            <img src="sunflower1.jpg" alt="Sunflowers Bouquet" class="flower-image">
+            <div class="flower-controls">
+                <h2>Sunflowers Bouquet</h2>
+                <div class="price">RM99.99</div>
+                <div class="quantity-control">
+                    <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button class="add-to-cart" onclick="addToCart(this)" 
+                data-name="Sunflowers Bouquet" 
+                data-price="99.99">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="flower-frame">
+            <img src="sunflower2.jpg" alt="Sunflower Bouquet(With rose)" class="flower-image">
+            <div class="flower-controls">
+                <h2>Sunflowers Bouquet(With roses)</h2>
+                <div class="price">RM119.99</div>
+                <div class="quantity-control">
+                    <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button class="add-to-cart" onclick="addToCart(this)" 
+                data-name="Sunflowers Bouquet(With roses)" 
+                data-price="119.99">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="flower-frame">
+            <img src="peony1.jpg" alt="Peony Bouquet(White)" class="flower-image">
+            <div class="flower-controls">
+                <h2>Peony Bouquet(White)</h2>
+                <div class="price">RM29.99</div>
+                <div class="quantity-control">
+                    <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button class="add-to-cart" onclick="addToCart(this)" 
+                data-name="Peony Bouquet(White)" 
+                data-price="29.99">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="flower-frame">
+            <img src="peony2.jpg" alt="Peony Bouquet(Pink)" class="flower-image">
+            <div class="flower-controls">
+                <h2>Peony Bouquet(Pink)</h2>
+                <div class="price">RM29.99</div>
+                <div class="quantity-control">
+                    <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button class="add-to-cart" onclick="addToCart(this)" 
+                data-name="Peony Bouquet(Pink)" 
+                data-price="29.99">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="flower-frame">
+            <img src="daisy3.jpg" alt="Daisy Bouquet(White&Red)" class="flower-image">
+            <div class="flower-controls">
+                <h2>Daisy Bouquet(White&Red)</h2>
+                <div class="price">RM49.99</div>
+                <div class="quantity-control">
+                    <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button class="add-to-cart" onclick="addToCart(this)" 
+                data-name="Daisy Bouquet(White&Red)" 
+                data-price="49.99">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="flower-frame">
+            <img src="daisy4.jpg" alt="Daisy Bouquet(Pink&White)" class="flower-image">
+            <div class="flower-controls">
+                <h2>Daisy Bouquet(Pink&White)</h2>
+                <div class="price">RM29.99</div>
+                <div class="quantity-control">
+                    <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button class="add-to-cart" onclick="addToCart(this)" 
+                data-name="Daisy Bouquet(Pink&White)" 
+                data-price="29.99">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="flower-frame">
+            <img src="rose4.jpg" alt="Mixed Flowers Bouquet(Roses&Phalaenopsis)" class="flower-image">
+            <div class="flower-controls">
+                <h2>Mixed Flowers Bouquet(Roses&Phalaenopsis)</h2>
+                <div class="price">RM69.99</div>
+                <div class="quantity-control">
+                    <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button class="add-to-cart" onclick="addToCart(this)" 
+                data-name="Mixed Flowers Bouquet(Roses&Phalaenopsis)" 
+                data-price="69.99">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="flower-frame">
+            <img src="sunflower3.jpg" alt="Mixed Flowers Bouquet(Sunflowers,Roses&Lily)" class="flower-image">
+            <div class="flower-controls">
+                <h2>Mixed Flowers Bouquet(Sunflowers,Roses&Lily)</h2>
+                <div class="price">RM119.99</div>
+                <div class="quantity-control">
+                    <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button class="add-to-cart" onclick="addToCart(this)" 
+                data-name="Mixed Flowers Bouquet(Sunflowers,Roses&Lily)" 
+                data-price="119.99">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="flower-frame">
+            <img src="hehua1.jpg" alt="Hehua Bouquet(Pink)" class="flower-image">
+            <div class="flower-controls">
+                <h2>Hehua Bouquet(Pink)</h2>
+                <div class="price">RM79.99</div>
+                <div class="quantity-control">
+                    <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button class="add-to-cart" onclick="addToCart(this)" 
+                data-name="Hehua Bouquet(Pink)" 
+                data-price="79.99">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="flower-frame">
+            <img src="hehua2.jpg" alt="Hehua Bouquet(White)" class="flower-image">
+            <div class="flower-controls">
+                <h2>Hehua Bouquet(White)</h2>
+                <div class="price">RM59.99</div>
+                <div class="quantity-control">
+                    <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button class="add-to-cart" onclick="addToCart(this)" 
+                data-name="Hehua Bouquet(White)" 
+                data-price="59.99">Add to Cart</button>
+            </div>
+        </div>
+
+        
+    </section>
+    
+    <footer class="footer-nav">
+        <a href="pay.html" class="footer-btn">Pay Now</a>
+        <a href="home.html" class="footer-btn">Back</a>
+    </footer>
+    <script>
+        function changeQuantity(button, change) {
+            const quantitySpan = button.parentNode.querySelector('.quantity');
+            let currentQuantity = parseInt(quantitySpan.textContent);
+            currentQuantity = Math.max(0, currentQuantity + change);
+            quantitySpan.textContent = currentQuantity;
+        }
+
+        function addToCart(button) {
+            const container = button.closest('.flower-controls');
+            const quantity = parseInt(container.querySelector('.quantity').textContent);
+            
+            if (quantity === 0) return;
+
+            const name = button.getAttribute('data-name');
+            const price = parseFloat(button.getAttribute('data-price'));
+            
+            let cart = JSON.parse(localStorage.getItem('flowerCart') || '[]');
+            
+            cart.push({
+                name: name,
+                price: price,
+                quantity: quantity
+            });
+            
+            localStorage.setItem('flowerCart', JSON.stringify(cart));
+            
+            container.querySelector('.quantity').textContent = '0';
+            
+            alert('Added to cart!');
+            
+            window.location.href = 'pay.html';
+        }
+    </script>
+</body>
+</html>
